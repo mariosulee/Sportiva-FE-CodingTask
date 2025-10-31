@@ -1,207 +1,216 @@
 {
-    "data": [
+  "data": [
     {
-    "season": 2026,
-    "status": "played",
-    "timeVenueUTC": "00:00:00",
-    "dateVenue": "2025-10-03",
-    "stadium": null,
-    "homeTeam": {
-    "name": "Al Shabab",
-    "officialName": "Al Shabab FC",
-    "slug": "al-shabab-fc",
-    "abbreviation": "SHA",
-    "teamCountryCode": "KSA",
-    "stagePosition": null
-    },
-    "awayTeam": {
-    "name": "Nasaf",
-    "officialName": "FC Nasaf",
-    "slug": "fc-nasaf-qarshi",
-    "abbreviation": "NAS",
-    "teamCountryCode": "UZB",
-    "stagePosition": null
-    },
-    "result": {
-    "homeGoals": 1,
-    "awayGoals": 2,
-    "winner": "Nasaf",
-    "message": null,
-    "goals": [],
-    "yellowCards": [],
-    "secondYellowCards": [],
-    "directRedCards": []
-    },
-    "stage": {
-    "id": "ROUND OF 16",
-    "name": "ROUND OF 16",
-    "ordering": 4
-    },
-    "group": null,
-    "originCompetitionId": "afc-champions-league",
-    "originCompetitionName": "AFC Champions League",
-    "sport": "football"
-    },
-    {
-    "season": 2026,
-    "status": "scheduled",
-    "timeVenueUTC": "16:00:00",
-    "dateVenue": "2025-10-14",
-    "stadium": null,
-    "homeTeam": {
-    "name": "Al Hilal",
-    "officialName": "Al Hilal Saudi FC",
-    "slug": "al-hilal-saudi-fc",
-    "abbreviation": "HIL",
-    "teamCountryCode": "KSA",
-    "stagePosition": null
+      "season": 2026,
+      "status": "Played",
+      "timeVenueUTC": "12:00 (CET)",
+      "dateVenue": "2025-10-03",
+      "stadium": "Allianz Stadion",
+      "homeTeam": {
+        "name": "Rapid Wien",
+        "officialName": "SK Rapid Wien",
+        "slug": "sk-rapid-wien",
+        "abbreviation": "RAP",
+        "teamCountryCode": "AUT",
+        "stagePosition": null
+      },
+      "awayTeam": {
+        "name": "Austria Wien",
+        "officialName": "FK Austria Wien",
+        "slug": "fk-austria-wien",
+        "abbreviation": "FAK",
+        "teamCountryCode": "AUT",
+        "stagePosition": null
+      },
+      "result": {
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "winner": "Draw",
+        "message": null,
+        "goals": [],
+        "yellowCards": [],
+        "secondYellowCards": [],
+        "directRedCards": []
+      },
+      "stage": {
+        "id": "ROUND OF 16",
+        "name": "ROUND OF 16",
+        "ordering": 4
+      },
+      "originCompetitionId": "austrian-bundesliga",
+      "originCompetitionName": "Austrian Bundesliga",
+      "sport": "Football"
     },
 
-    "awayTeam": {
-    "name": "Shabab Al Ahli",
-    "officialName": "SHABAB AL AHLI DUBAI",
-    "slug": "shabab-al-ahli-club",
-    "abbreviation": "SAH",
-    "teamCountryCode": "UAE",
-    "stagePosition": null
-    },
-    "result": {
-    "homeGoals": 0,
-    "awayGoals": 0,
-    "winner": null,
-    "winnerId": null,
-    "message": null,
-    "goals": [],
-    "yellowCards": [],
-    "secondYellowCards": [],
-    "directRedCards": [],
-    "scoreByPeriods": null
-    },
-    "stage": {
-    "id": "ROUND OF 16",
-    "name": "ROUND OF 16",
-    "ordering": 4
-    },
-    "group": null,
-    "originCompetitionId": "afc-champions-league",
-    "originCompetitionName": "AFC Champions League",
-    "sport": "football"
-    },
-    {
-    "season": 2026,
-    "status": "scheduled",
-    "timeVenueUTC": "15:25:00",
-    "dateVenue": "2025-10-31",
-    "stadium": null,
-    "homeTeam": {
-    "name": "Al Duhail",
-    "officialName": "AL DUHAIL SC",
-    "slug": "al-duhail-sc",
-    "abbreviation": "DUH",
-    "teamCountryCode": "QAT",
-    "stagePosition": null
-    },
-    "awayTeam": {
-    "name": "Al Rayyan",
-    "officialName": "AL RAYYAN SC",
-    "slug": "al-rayyan-sc",
-    "abbreviation": "RYN",
-    "teamCountryCode": "QAT",
-    "stagePosition": null
-    },
-    "result": {
-    "homeGoals": 0,
-    "awayGoals": 0,
-    "winner": null,
-    "winnerId": null,
-    "message": null,
 
-    "goals": [],
-    "yellowCards": [],
-    "secondYellowCards": [],
-    "directRedCards": [],
-    "scoreByPeriods": null
-    },
-    "stage": {
-    "id": "ROUND OF 16",
-    "name": "ROUND OF 16",
-    "ordering": 4
-    },
-    "group": null,
-    "originCompetitionId": "afc-champions-league",
-    "originCompetitionName": "AFC Champions League",
-    "sport": "football"
-    },
-    {
-    "season": 2026,
-    "status": "scheduled",
-    "timeVenueUTC": "08:00:00",
-    "dateVenue": "2025-11-04",
-    "stadium": null,
-    "homeTeam": {
-    "name": "Al Faisaly",
-    "officialName": "Al Faisaly FC",
-    "slug": "al-faisaly-fc",
-    "abbreviation": "FAI",
-    "teamCountryCode": "KSA",
-    "stagePosition": null
-    },
-    "awayTeam": {
-    "name": "Foolad",
-    "officialName": "FOOLAD KHOUZESTAN FC",
-    "slug": "foolad-khuzestan-fc",
-    "abbreviation": "FLD",
-    "teamCountryCode": "IRN",
-    "stagePosition": null
-    },
-    "result": {
-    "homeGoals": 0,
-    "awayGoals": 0,
-    "winner": null,
-    "winnerId": null,
-    "message": null,
-    "goals": [],
-    "yellowCards": [],
-    "secondYellowCards": [],
-    "directRedCards": [],
-    "scoreByPeriods": null
-    },
-    "stage": {
-    "id": "ROUND OF 16",
-    "name": "ROUND OF 16",
-    "ordering": 4
-    },
-    "group": null,
-    "originCompetitionId": "afc-champions-league",
-    "originCompetitionName": "AFC Champions League",
 
-    "sport": "football"
-    },
+
     {
-    "season": 2026,
-    "status": "scheduled",
-    "timeVenueUTC": "00:00:00",
-    "dateVenue": "2025-11-19",
-    "stadium": null,
-    "homeTeam": null,
-    "awayTeam": {
-    "name": "Urawa Reds",
-    "officialName": "Urawa Red Diamonds",
-    "slug": "urawa-red-diamonds",
-    "abbreviation": "RED",
-    "teamCountryCode": "JPN",
-    "stagePosition": null
+      "season": 2026,
+      "status": "Scheduled",
+      "timeVenueUTC": "18:30 (CET)",
+      "dateVenue": "2025-10-14",
+      "stadium": "Steffl Arena",
+      "homeTeam": {
+        "name": "Vienna Capitals",
+        "officialName": "Vienna Capitals",
+        "slug": "vienna-capitals",
+        "abbreviation": "VIC",
+        "teamCountryCode": "AUT",
+        "stagePosition": null
+      },
+      "awayTeam": {
+        "name": "EC KAC",
+        "officialName": "EC KAC Klagenfurt",
+        "slug": "ec-kac",
+        "abbreviation": "KAC",
+        "teamCountryCode": "AUT",
+        "stagePosition": null
+      },
+      "result": {
+        "homeGoals": 3,
+        "awayGoals": 2,
+        "winner": "Vienna Capitals",
+        "message": null,
+        "goals": [],
+        "yellowCards": [],
+        "secondYellowCards": [],
+        "directRedCards": []
+      },
+      "stage": {
+        "id": "REGULAR SEASON",
+        "name": "REGULAR SEASON",
+        "ordering": 1
+      },
+      "originCompetitionId": "ice-hockey-league",
+      "originCompetitionName": "ICE Hockey League",
+      "sport": "Hockey"
     },
-    "result": null,
-    "stage": {
-    "id": "FINAL",
-    "name": "FINAL",
-    "ordering": 7
+
+
+
+
+    {
+      "season": 2026,
+      "status": "Scheduled",
+      "timeVenueUTC": "20:00 (CET)",
+      "dateVenue": "2025-10-31",
+      "stadium": "Hallmann Dome",
+      "homeTeam": {
+        "name": "BC Vienna",
+        "officialName": "GGMT Vienna",
+        "slug": "bc-vienna",
+        "abbreviation": "BCV",
+        "teamCountryCode": "AUT",
+        "stagePosition": null
+      },
+      "awayTeam": {
+        "name": "Kapfenberg Bulls",
+        "officialName": "Kapfenberg Bulls",
+        "slug": "kapfenberg-bulls",
+        "abbreviation": "BUL",
+        "teamCountryCode": "AUT",
+        "stagePosition": null
+      },
+      "result": {
+        "homeGoals": 85,
+        "awayGoals": 80,
+        "winner": "BC Vienna",
+        "message": null,
+        "goals": [],
+        "yellowCards": [],
+        "secondYellowCards": [],
+        "directRedCards": []
+      },
+      "stage": {
+        "id": "REGULAR SEASON",
+        "name": "REGULAR SEASON",
+        "ordering": 1
+      },
+      "originCompetitionId": "austrian-basketball-superliga",
+      "originCompetitionName": "Austrian Basketball Superliga",
+      "sport": "Basketball"
     },
-    "group": null,
-    "originCompetitionId": "afc-champions-league",
-    "originCompetitionName": "AFC Champions League",
-    "sport": "football"
+
+
+
+
+    {
+      "season": 2026,
+      "status": "Scheduled",
+      "timeVenueUTC": "08:00 (CET)",
+      "dateVenue": "2025-11-04",
+      "stadium": "Ernst Happel Stadion",
+      "homeTeam": {
+        "name": "Red Bull Salzburg",
+        "officialName": "FC Red Bull Salzburg",
+        "slug": "fc-red-bull-salzburg",
+        "abbreviation": "RBS",
+        "teamCountryCode": "AUT",
+        "stagePosition": null
+      },
+      "awayTeam": {
+        "name": "LASK Linz",
+        "officialName": "Linzer Athletik-Sport-Klub",
+        "slug": "lask-linz",
+        "abbreviation": "LASK",
+        "teamCountryCode": "AUT",
+        "stagePosition": null
+      },
+      "result": {
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "winner": "Red Bull Salzburg",
+        "message": null,
+        "goals": [],
+        "yellowCards": [],
+        "secondYellowCards": [],
+        "directRedCards": []
+      },
+      "stage": {
+        "id": "SEMIFINALS",
+        "name": "SEMIFINALS",
+        "ordering": 6
+      },
+      "originCompetitionId": "austrian-bundesliga",
+      "originCompetitionName": "Austrian Bundesliga",
+      "sport": "Football"
+    },
+
+
+
+
+    {
+      "season": 2026,
+      "status": "Scheduled",
+      "timeVenueUTC": "19:30 (CET)",
+      "dateVenue": "2025-11-19",
+      "stadium": "Steffl Arena",
+      "homeTeam": {
+        "name": "Vienna Capitals",
+        "officialName": "Vienna Capitals",
+        "slug": "vienna-capitals",
+        "abbreviation": "VIC",
+        "teamCountryCode": "AUT",
+        "stagePosition": null
+      },
+      "awayTeam": {
+        "name": "Graz99ers",
+        "officialName": "Moser Medical Graz99ers",
+        "slug": "graz99ers",
+        "abbreviation": "GRZ",
+        "teamCountryCode": "AUT",
+        "stagePosition": null
+      },
+      "result": null,
+      "stage": {
+        "id": "FINAL",
+        "name": "FINAL",
+        "ordering": 7
+      },
+      "originCompetitionId": "ice-hockey-league",
+      "originCompetitionName": "ICE Hockey League",
+      "sport": "Hockey"
     }
-    ]
+  ]
 }
