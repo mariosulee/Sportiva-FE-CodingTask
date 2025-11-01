@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { GiHockey } from "react-icons/gi";
 import { IoIosFootball } from "react-icons/io";
 import { GiBasketballBasket } from "react-icons/gi";
-
+import { Link } from "react-router-dom";
 
 type CalendarProps={
     events:Event[]
@@ -108,6 +108,14 @@ export default function Calendar( {events}:CalendarProps ){
                         )
                     })}
                 </div>
+                
+                <div className="p-10 text-center">
+                    <Link to="/addEvent" className="p-10 text-center inline-block px-7 text-white py-3 bg-blue-950 rounded-lg shadow-2xl font-bold text-xl hover:scale-110 transition-transform uppercase ">Add new event</Link>
+                </div>  
+
+
+
+
             </div>
         </>
     )

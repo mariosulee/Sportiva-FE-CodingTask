@@ -1,19 +1,23 @@
 import { MdOutlineSportsMartialArts } from "react-icons/md";
 import Calendar from "./components/Calendar"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import EventDetail from "./components/EventDetail";
 import { useState } from "react";
 import eventsData from "./data/events.json"
-import type { Event } from "./types/types";
+import type { SportEvent } from "./types/types";
+import EventForm from "./components/EventForm";
+
+
 
 function App() {
   
   //global state for events 
 
-  const [events, setEvents] = useState(eventsData.data as Event[]);
+  const [events, setEvents] = useState<SportEvent[]>(eventsData.data);
+
 
   return (
-    <BrowserRouter>
+  
       <>
 
       <header className=" relative bg-linear-to-tr from-yellow-700 to-gray-800 py-3 max-h-72 shadow-lg px-10">
@@ -28,9 +32,9 @@ function App() {
       <main className="bg-slate-100">
         <Routes>
           <Route path="/" element={<Calendar events={events} />} />
-          <Route path="/event/:date" element={<EventDetail events={events}/>} />
+          <Route path="/event/:date" element={<EventDetail events={events} setEvents={setEvents}/>} />
+          <Route path="/addEvent" element={<EventForm events={events} setEvents={setEvents}/>} />
         </Routes>
-   
 
       </main>
 
@@ -47,7 +51,7 @@ function App() {
 
 
       </>
-    </BrowserRouter>
+  
   )
 }
 
