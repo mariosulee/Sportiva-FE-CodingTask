@@ -60,16 +60,17 @@ export default function EventForm( {events, setEvents}: EventFormProps){
 
 
     return(
-        <>
-        <div className="bg-white">
 
-            <form className="flex flex-col mt-15 px-15 ml-5 mr-5 border-yellow-500 border-3 rounded-lg" onSubmit={handleSubmit}>
-                <label className="uppercase text-center py-5 text-2xl font-black y-2">New Event</label>
+        <>
+        <div className="bg-slate-100 py-1 md:py-5 px-5 md:px-20">
+
+            <form className=" bg-white flex flex-col mt-10 p-6 border-yellow-500 border-3 rounded-lg shadow-2xl" onSubmit={handleSubmit}>
+                <label className="uppercase text-center text-lg md:text-2xl font-black y-2">New Event</label>
 
                 <div className=" flex flex-col gap-2">
 
-                    <label htmlFor="category" className="text-xl mt-3">Sport: </label>
-                    <select id="category" className="bg-gray-100 rounded-md p-2" name="category"
+                    <label htmlFor="category" className="text-sm md:text-xl mt-3">Sport: </label>
+                    <select id="category" className="bg-gray-100 rounded-md md:p-2" name="category"
                         onChange={ e=> setCategory(e.target.value)}>
                         <option value="">-- select a sport --</option>
                         {categories.map( cat => (
@@ -77,32 +78,32 @@ export default function EventForm( {events, setEvents}: EventFormProps){
                         ))}
                     </select>
 
-                    <label htmlFor="team1" className="text-xl mt-3">Name of Team 1: </label>
-                    <input type="text" className="bg-gray-100 rounded-md p-2" name="team1" id="team1"
+                    <label htmlFor="team1" className="text-sm md:text-xl mt-3">Name of Team 1: </label>
+                    <input type="text" className="bg-gray-100 rounded-md md:p-2" name="team1" id="team1"
                     onChange={ e=> setTeam1(e.target.value)}></input>
 
-                    <label htmlFor="team2" className="text-xl mt-3">Name of Team 2: </label>
-                    <input type="text" className="bg-gray-100 rounded-md p-2" name="team2" id="team2"
+                    <label htmlFor="team2" className="text-sm md:text-xl mt-3">Name of Team 2: </label>
+                    <input type="text" className="bg-gray-100 rounded-md md:p-2" name="team2" id="team2"
                     onChange={ e=> setTeam2(e.target.value)}></input>
 
-                    <label htmlFor="stadium" className="text-xl mt-3">Stadium: </label>
-                    <input type="text" className="bg-gray-100 rounded-md p-2" name="stadium" id="stadium"
+                    <label htmlFor="stadium" className="text-sm md:text-xl mt-3">Stadium: </label>
+                    <input type="text" className="bg-gray-100 rounded-md md:p-2" name="stadium" id="stadium"
                     onChange={ e=> setStadium(e.target.value)}></input>
                     
-                    <label htmlFor="league" className="text-xl mt-3">League: </label>
-                    <input type="text" className="bg-gray-100 rounded-md p-2" name="legue" id="league"
+                    <label htmlFor="league" className="text-sm md:text-xl mt-3">League: </label>
+                    <input type="text" className="bg-gray-100 rounded-md md:p-2" name="league" id="league"
                     onChange={ e=> setLeague(e.target.value)}></input>
                     
-                    <label htmlFor="date" className="text-xl mt-3">Date of the event: </label>
-                    <input type="date" className="bg-gray-100 rounded-md p-2" name="date" id="date"
+                    <label htmlFor="date" className="text-sm md:text-xl mt-3">Date of the event: </label>
+                    <input type="date" className="bg-gray-100 rounded-md md:p-2" name="date" id="date"
                     onChange={ e=> setDate(e.target.value)}></input>
 
-                    <label htmlFor="time" className="text-xl mt-3">Time of the event: </label>
-                    <input type="time" className="bg-gray-100 rounded-md p-2" name="time" id="time"
+                    <label htmlFor="time" className="text-sm md:text-xl mt-3">Time of the event: </label>
+                    <input type="time" className="bg-gray-100 rounded-md md:p-2" name="time" id="time"
                     onChange={ e=> setTime(e.target.value)}></input>
 
 
-                    <input type="submit" className=" bg-blue-950 p-2 mt-10 mb-10 text-white uppercase font-black rounded-lg hover:scale-105 transition-transform" value="add event" ></input>
+                    <input type="submit" className="text-xs bg-blue-950 px-1 py-2 md:text-lg mt-5 mb-5 md:mt-10 text-white uppercase font-black rounded-sm md:rounded-lg hover:scale-105 transition-transform" value="add event" ></input>
                 </div>
 
 
@@ -110,8 +111,8 @@ export default function EventForm( {events, setEvents}: EventFormProps){
             </form>
 
 
-            <div className="p-10 mt-30 text-center">
-                    <Link to="/" className="p-10 text-center inline-block px-7 text-white py-3 bg-blue-950 rounded-lg shadow-2xl font-bold text-xl hover:scale-110 transition-transform "> Go back to the calendar</Link>
+            <div className="md:p-5 mt-10 text-center">
+                    <Link to="/" className=" text-sm  text-center inline-block  px-3 py-2 md:px-7 text-white mb-7 md:mb-15 mt-5 md:mt-5 md:py-3 bg-blue-950 rounded-lg shadow-2xl font-bold md:text-xl hover:scale-110 transition-transform "> Go back to the calendar</Link>
             </div>  
 
         </div>

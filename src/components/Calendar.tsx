@@ -1,4 +1,4 @@
-import type { Event } from "../types/types";
+import type { SportEvent } from "../types/types";
 import { useNavigate } from "react-router-dom";
 import { GiHockey } from "react-icons/gi";
 import { IoIosFootball } from "react-icons/io";
@@ -6,7 +6,7 @@ import { GiBasketballBasket } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 type CalendarProps={
-    events:Event[]
+    events:SportEvent[]
 }
 
 export default function Calendar( {events}:CalendarProps ){
@@ -57,15 +57,15 @@ export default function Calendar( {events}:CalendarProps ){
     return(
         <>
         
-            <div className="p-4">
-                <h1 className="text-2xl font-bold mt-10 mb-2 text-center text-blue-950"> Events on</h1>
-                <h1 className="text-2xl font-black text-center text-blue-950">{today.toLocaleString("en-UK", {month: "long"})} {year}</h1>  {/* tolocalstring convierte un objeto date a una cadena legible, long es para que no abrevie el mes, */}
+            <div className="md:p-4 sm:px-20 md:px-30">
+                <h1 className="text-base md:text-2xl font-bold mt-10 md:mb-2 text-center text-blue-950"> Events on</h1>
+                <h1 className="text-base md:text-2xl font-black text-center text-blue-950">{today.toLocaleString("en-UK", {month: "long"})} {year}</h1>  {/* tolocalstring convierte un objeto date a una cadena legible, long es para que no abrevie el mes, */}
                 
-                <div className="grid grid-cols-7 gap-3 p-20">
+                <div className="grid grid-cols-7 gap-3  p-5 md:p-20">
 
                     {/* for the weekdays */}
                     {weekDays.map( weekday => (
-                        <div key={weekday} className="text-center font-bold">
+                        <div key={weekday} className="text-center text-xs md:text-lg font-bold">
                             {weekday}
                         </div>
                     ))}
@@ -73,7 +73,7 @@ export default function Calendar( {events}:CalendarProps ){
 
                     {/* for the empty days */}
                     {emptyDates.map( (blank) => (
-                        <div key={blank} className="h-16"></div>
+                        <div key={blank} className="md:h-25"></div>
                     ))}
                     
 
@@ -92,17 +92,17 @@ export default function Calendar( {events}:CalendarProps ){
                         let sportIcon;
                         if(eventForDay){
                             if(eventForDay.sport==="Football")
-                                sportIcon=<IoIosFootball className="text-4xl" /> 
+                                sportIcon=<IoIosFootball className="text-base md:text-4xl" /> 
                             else if(eventForDay.sport==="Basketball")
-                                sportIcon=<GiBasketballBasket className="text-4xl"/>
+                                sportIcon=<GiBasketballBasket className="text-base md:text-4xl"/>
                             else if(eventForDay.sport==="Hockey")
-                                sportIcon=<GiHockey className="text-4xl"/>
+                                sportIcon=<GiHockey className="text-base md:text-4xl"/>
                         }
 
                         return(  //este es el return del map
-                            <div onClick={()=> handleClick(day)} key={day} className={`border-3  font-bold rounded-md h-25 flex flex-col items-center justify-center hover:bg-gray-300 hover:scale-110 transition-transform shadow-xl
+                            <div onClick={()=> handleClick(day)} key={day} className={`border-2 md:border-3  font-bold rounded-md h-10 md:h-25 flex flex-col items-center justify-center hover:bg-gray-300 hover:scale-110 transition-transform shadow-xl
                                     ${eventDays.includes(day) ? "bg-blue-950 border-yellow-500 text-white hover:bg-yellow-500" : ""} `}>
-                            <span>{day}</span>
+                            <span className="text-xs md:text-lg">{day}</span>
                             {sportIcon && <div>{sportIcon}</div>}
                             </div>
                         )
@@ -110,7 +110,7 @@ export default function Calendar( {events}:CalendarProps ){
                 </div>
                 
                 <div className="p-10 text-center">
-                    <Link to="/addEvent" className="p-10 text-center inline-block px-7 text-white py-3 bg-blue-950 rounded-lg shadow-2xl font-bold text-xl hover:scale-110 transition-transform uppercase ">Add new event</Link>
+                    <Link to="/addEvent" className="text-xs p-10 text-center inline-block px-7 text-white py-3 bg-blue-950 rounded-lg shadow-2xl font-bold md:text-xl hover:scale-110 transition-transform uppercase ">Add new event</Link>
                 </div>  
 
 
