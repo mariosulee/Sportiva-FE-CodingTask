@@ -12,6 +12,8 @@ The calendar is displayed highlighting event dates, and lets users add new event
 Different hooks or React are used (useNavigate, useState, useReducer, useEffect), and all events users have registered are persisted using localStorage, while initial data is loaded from a JSON file. The app has been developed using a responsive design and ensuring navigation is accessible from all pages.
 
 
+
+
 2. Instruccions on how to run the App
 
 You can try my application online using Netlify at https://sportiva-mariosule.netlify.app/ . Netlify is a cloud platform that automatically builds and hosts web applications from your project's code repository. It provides a fast and global deployment of applications.
