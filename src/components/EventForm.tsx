@@ -7,12 +7,11 @@ import { useNavigate } from "react-router-dom"
 
 
 type EventFormProps={
-    events:SportEvent[],
-    setEvents: React.Dispatch<React.SetStateAction<SportEvent[]>>
+    dispatch: React.Dispatch<any>
 }
 
 
-export default function EventForm( {events, setEvents}: EventFormProps){
+export default function EventForm( {dispatch}: EventFormProps){
 
     const navigate=useNavigate()
 
@@ -28,7 +27,7 @@ export default function EventForm( {events, setEvents}: EventFormProps){
 
     const handleSubmit= (e:React.FormEvent<HTMLFormElement>)=> {
 
-        e.preventDefault()  //para manejar yo mismo lo q pasa cuando se pulsa submit
+        e.preventDefault()  // this is used in React to manipulate the submit button just the way I want to, and not the default way
 
         if (!category || !team1 ||!team2 || !stadium|| !league||!date ||!time) {
             alert("Please fill all fields");
@@ -50,11 +49,9 @@ export default function EventForm( {events, setEvents}: EventFormProps){
             season: 2026,
         }
 
-        setEvents([...events, newEvent])  //add the new event to the global state
+        dispatch({type:'add-event', payload:newEvent})  //add the new event to the global state
 
-       
         navigate("/")
-
     }
 
 

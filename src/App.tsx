@@ -2,20 +2,21 @@ import { MdOutlineSportsMartialArts } from "react-icons/md";
 import Calendar from "./components/Calendar"
 import { Routes, Route } from "react-router-dom";
 import EventDetail from "./components/EventDetail";
-import { useState } from "react";
-import eventsData from "./data/events.json"
-import type { SportEvent } from "./types/types";
+import { useEffect, useReducer } from "react";
 import EventForm from "./components/EventForm";
-
+import { eventReducer, initialState } from "./reducers/eventReducer";
 
 
 function App() {
   
   //global state for events 
+  const[state,dispatch]=useReducer(eventReducer, initialState)
+ 
+  useEffect( () => {
+      localStorage.setItem('events', JSON.stringify(state.events))
+  }, [state.events])
 
-  const [events, setEvents] = useState<SportEvent[]>(eventsData.data);
-
-
+  
   return (
   
       <>
@@ -31,9 +32,9 @@ function App() {
  
       <main>
         <Routes>
-          <Route path="/" element={<Calendar events={events} />} />
-          <Route path="/event/:date" element={<EventDetail events={events} setEvents={setEvents}/>} />
-          <Route path="/addEvent" element={<EventForm events={events} setEvents={setEvents}/>} />
+          <Route path="/" element={<Calendar events={state.events} />} />
+          <Route path="/event/:date" element={<EventDetail events={state.events} dispatch={dispatch}/>} />
+          <Route path="/addEvent" element={<EventForm dispatch={dispatch}/>} />
         </Routes>
 
       </main>

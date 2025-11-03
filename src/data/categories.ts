@@ -3,8 +3,7 @@ import { IoIosFootball } from "react-icons/io";
 import { GiBasketballBasket } from "react-icons/gi";
 import React from "react";
 
-
-
+//this file is for renderizing the available categories in the form
 
 type Category={
     id:string,

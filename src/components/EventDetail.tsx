@@ -9,17 +9,18 @@ import { useNavigate } from "react-router-dom";
 
 type EventDetailProps={
     events: SportEvent[]
-    setEvents:React.Dispatch<React.SetStateAction<SportEvent[]>>
+    dispatch:React.Dispatch<any>
 }
 
-export default function EventDetail({events, setEvents}:EventDetailProps){
+export default function EventDetail({events, dispatch}:EventDetailProps){
 
     const{date}=useParams<{ date?:string}>();   //used to extract the dynamic parameter named 'date' when using <Route>
     const navigate=useNavigate();
 
-    //se filtran los eventos de esa fecha
+    // firstly, the events of that date are filtered
     const dayEvents=events.filter( ev => ev.dateVenue===date)
 
+    // 1. If there are no events, display that on the screen
     if(dayEvents.length===0){
         return(
             <div className=" flex flex-col items-center justify-center text-center mb-7 md:mb-15 bg-white">
@@ -33,13 +34,12 @@ export default function EventDetail({events, setEvents}:EventDetailProps){
 
 
     const handleDelete= ( (id:string) => {
-        const updatedEvents=events.filter ( event => event.id!== id)
-        setEvents(updatedEvents)
+        dispatch( {type:'delete-event', payload:{id} })
         navigate("/")
     })
 
 
-    // if there are events
+    // 2. If there are events, return this
     return(
         <>
             <div className="p-4 md:p-10 bg-slate-50">
