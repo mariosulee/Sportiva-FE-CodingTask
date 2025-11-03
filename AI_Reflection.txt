@@ -1,0 +1,23 @@
+All the code implemented in this project has been written and supervised by me.
+I understand all parts of it and have used my own work methods, logic, and programming
+practices that I have learned during my studies and perfected them.
+
+Regarding the parts where AI was used, I primarily relied on it for translating the 
+extended documentation that I have written in Spanish. I have used it because that document
+was not necessary for the submission and I wrote it as I wanted to explain in more detail
+how I built and implemented everything.
+
+I have also used AI to assist with the typing of the event object to automate and speed up
+the creation of example events in my JSON file. This helped reduce repetitive manual work while also
+making sure the data structures are correct. When doing this kind of manual unnecessary work, it 
+is common to make mistakes, so I think it is useful to use AI only in these cases.
+
+Lastly, AI was helpful when guiding some technical decisions, such as evaluating the most efficient
+way to implement state management. AI provided me with different alternatives, but I implemented the states
+and methodologies myself, following these guidelines.
+
+All logic and functionality were completed and verified by me to ensure correctness and understanding.
+
+One potential improvement I would make to the application, given more time, would be to integrate Context API 
+along with a custom hook for managing global state more efficiently. This would allow components like Calendar, 
+EventDetail, and EventForm to access and update events seamlessly without passing props manually.
