@@ -18,9 +18,10 @@ Different hooks or React are used (useNavigate, useState, useReducer, useEffect)
 
 You can try my application online using Netlify at https://sportiva-mariosule.netlify.app/ . Netlify is a cloud platform that automatically builds and hosts web applications from your project's code repository. It provides a fast and global deployment of applications.
 
-You can also run it locally by downloading the .zip project, and extract its content. Then you should open the main project folder in a development environment such as Visual Studio Code. Install dependencies by running 'npm install' on a terminal, and then start the development server with 'npm run dev'. It will show the local URL that you can copy paste into a browser to run the app.
+You can also run it locally by downloading the .zip project, and extracting its content. Then you should open the main project folder in a development environment such as Visual Studio Code. Install dependencies by running 'npm install' on a terminal, and then start the development server with 'npm run dev'. It will show the local URL that you can copy paste into a browser to run the app.
 
 All the code of the project is allocated on my GitHub: https://github.com/mariosulee/Sportiva-FE-CodingTask.git
+
 
 
 
