@@ -1,73 +1,26 @@
-# React + TypeScript + Vite
+Mario Sulé Domínguez - FE Coding Task for Sportradar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+1. Overview 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is the FrontEnd coding task for my application of the Vienna Coding Academy Program 2026.
 
-## React Compiler
+It has been built using React, TypeScript, and TailwindCSS. The project is basically a sport's event dynamic calendar where users can view, filter, and manage sporting events by adding new ones or deleting others.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+The calendar is displayed highlighting event dates, and lets users add new events through a form, or delete previous ones clicking on the date of the event to see its details. 
 
-## Expanding the ESLint configuration
+Different hooks or React are used (useNavigate, useState, useReducer, useEffect), and all events users have registered are persisted using localStorage, while initial data is loaded from a JSON file. The app has been developed using a responsive design and ensuring navigation is accessible from all pages.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. Instruccions on how to run the App
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+You can try my application online using Netlify at https://sportiva-mariosule.netlify.app/ . Netlify is a cloud platform that automatically builds and hosts web applications from your project's code repository. It provides a fast and global deployment of applications.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+You can also run it locally by downloading the .zip project, and extract its content. Then you should open the main project folder in a development environment such as Visual Studio Code. Install dependencies by running 'npm install' on a terminal, and then start the development server with 'npm run dev'. It will show the local URL that you can copy paste into a browser to run the app.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+All the code of the project is allocated on my GitHub: https://github.com/mariosulee/Sportiva-FE-CodingTask.git
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+
+
