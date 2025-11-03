@@ -4,6 +4,7 @@ import { GiHockey } from "react-icons/gi";
 import { IoIosFootball } from "react-icons/io";
 import { GiBasketballBasket } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 type CalendarProps={
     events:SportEvent[]
@@ -12,6 +13,15 @@ type CalendarProps={
 export default function Calendar( {events}:CalendarProps ){
 
     const navigate = useNavigate();
+
+    //for filtering the sports
+    const[selectedSport, setSelectedSport]=useState<string>("")
+
+    const filteredEvents=selectedSport ? events.filter(e=> e.sport === selectedSport)  :  events
+
+
+
+
 
     const weekDays=["Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat.", "Sun."]
     const today=new Date()
@@ -37,7 +47,7 @@ export default function Calendar( {events}:CalendarProps ){
 
 
     //filtra los eventos del mes y año actual
-    const eventDays=events.filter( e => (
+    const eventDays=filteredEvents.filter( e => (
             new Date(e.dateVenue).getMonth() === month && new Date(e.dateVenue).getFullYear() ===year
         )
     ).map(e => new Date(e.dateVenue).getDate())
@@ -54,6 +64,8 @@ export default function Calendar( {events}:CalendarProps ){
     }
 
 
+    
+
     return(
         <>
         
@@ -61,6 +73,22 @@ export default function Calendar( {events}:CalendarProps ){
                 <h1 className="text-base md:text-2xl font-bold mt-10 md:mb-2 text-center text-blue-950"> Events on</h1>
                 <h1 className="text-base md:text-2xl font-black text-center text-blue-950">{today.toLocaleString("en-UK", {month: "long"})} {year}</h1>  {/* tolocalstring convierte un objeto date a una cadena legible, long es para que no abrevie el mes, */}
                 
+
+                {/* filtering by sport */}
+                <div className="flex justify-center mt-6 mb-4">
+
+                    <select value={selectedSport} onChange={ e => setSelectedSport(e.target.value)}
+                    className=" border-3 border-blue-900 font-bold text-blue-900 rounded-lg p-2 text-base md:text-lg">
+                        <option value="">All sports</option>
+                        <option value="Football">Football</option>
+                        <option value="Basketball">Basketball</option>
+                        <option value="Hockey">Hockey</option>
+                    </select>
+                </div>
+
+
+
+
                 <div className="grid grid-cols-7 gap-3  p-5 md:p-20">
 
                     {/* for the weekdays */}
@@ -83,7 +111,7 @@ export default function Calendar( {events}:CalendarProps ){
                     {days.map( (day) => {
 
                         //buscar en la lista de events el primer evento cuya fecha dateVenue coincida con la fecha del calendario q se esta renderizando. Si lo encuentra lo guarda en eventForDay
-                        const eventForDay=events.find( e => 
+                        const eventForDay=filteredEvents.find( e => 
                             new Date(e.dateVenue).getDate() ===day &&
                             new Date(e.dateVenue).getMonth() ===month &&
                             new Date(e.dateVenue).getFullYear()===year
