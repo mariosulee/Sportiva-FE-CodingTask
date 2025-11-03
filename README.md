@@ -26,4 +26,9 @@ All the code of the project is allocated on my GitHub: https://github.com/marios
 
 
 
+3. Extra Documentation 
+
+As I like to explain everything in detail, my project also includes detailed documentation that explains the development process from start to finish. It covers the architecture choices and the decisions made to manage state, routing, and data persistence with Local Storage. The documentation also outlines how components were structured, how the application was made responsive, and how features were implemented.
+
+
 
